@@ -12,7 +12,7 @@ For each integer n in the interval \[a,b\]:
 * If 1 <= n <= 9, the print the English representation of it in lowercase. That is, "one" for 1, "two" for 2 and so on.
 * Else if n > 9 and it is an even numeber, then print "even".
 * Else if n > 9 and it is an odd number, then print "odd".
-* Check that a<b and a<1.  Write cerr and return a non-zero value if this condition does not hold.
+* Check that a>=b and a,b>0 (positive).  Write cerr and return a non-zero value if this condition does not hold.
 
 Example:
 8
