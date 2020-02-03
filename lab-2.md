@@ -44,7 +44,7 @@ int main()
 
 ## Problem 2
 
-Write a program that takes in three arguments, a start temperature (in Celsius), an end temperature (in Celsius) and a step size. Print out a table that goes from the start temperature to the end temperature, in steps of the step size; The leftmost column will indicate the degree in Celsius and the rightmost column should indicate the degree in Fahrenheit.  You do not actually need to print the final end temperature if the step size does not exactly match. 
+Write a program that takes in three arguments, a start temperature (in Celsius), a step size, and an end temperature (in Celsius) and . Print out a table that goes from the start temperature to the end temperature, in steps of the step size; The leftmost column will indicate the degree in Celsius and the rightmost column should indicate the degree in Fahrenheit.  You do not actually need to print the final end temperature if the step size does not exactly match. 
 
 You should perform input validation: 
 * do not accept start temperatures less than a lower limit (which your code should specify as a constant) or higher than an upper limit (which your code should also specify). 
