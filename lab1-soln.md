@@ -1,5 +1,5 @@
 # Lab 1
-https://github.com/jortizcs/Rutgers-PM1/blob/master/2020/lab-1.md
+https://github.com/jortizcs-rutgers/PM1-Spring2020-Rutgers/blob/master/lab-1.md
 
 # Solutions
 
