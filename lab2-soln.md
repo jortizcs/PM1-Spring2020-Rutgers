@@ -1,5 +1,5 @@
 # Lab 2
-https://github.com/jortizcs/Rutgers-PM1/blob/master/2020/lab-2.md
+https://github.com/jortizcs-rutgers/PM1-Spring2020-Rutgers/blob/master/lab-2.md
 
 # Solutions
 problem 1: [http://cpp.sh/4myrs](http://cpp.sh/4myrs)
