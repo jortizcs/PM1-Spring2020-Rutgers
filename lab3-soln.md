@@ -1,5 +1,5 @@
 # Lab 3: 
-https://github.com/jortizcs/Rutgers-PM1/blob/master/2020/lab3.md
+https://github.com/jortizcs-rutgers/PM1-Spring2020-Rutgers/blob/master/lab3-soln.md
 
 # Solutions:
 Problem 1: [http://cpp.sh/9slrv](http://cpp.sh/9slrv)
