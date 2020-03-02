@@ -102,6 +102,8 @@ int main()
 
 Given a matrix, clockwise-rotate elements in it.  Please add code to [problem3.cpp](https://github.com/jortizcs-rutgers/PM1-Spring2020-Rutgers/blob/master/lab4/p3/problem3.cpp) and the [makefile](https://github.com/jortizcs-rutgers/PM1-Spring2020-Rutgers/blob/master/lab4/p3/makefile).  Use the code in [p3](https://github.com/jortizcs-rutgers/PM1-Spring2020-Rutgers/tree/master/lab4/p3) to test your code.
 
+Submit your code and a cpp.sh url, like in your projects and previous assignments.  For the cpp.sh url, put your solution into one large program.
+
 ```
 Input
 1    2    3
