@@ -63,8 +63,6 @@ int main()
 
 ## Problem 2
 
-## Problem 2
-
 Write a function to reverse an array of integers starting from a given **start** index and a given **end** index.  Note, the end index is **inclusive**.  
 
 ```C
