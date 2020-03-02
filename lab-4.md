@@ -102,7 +102,7 @@ int main()
 
 ## Problem 3
 
-Given a matrix, clockwise-rotate elements in it.  Please add code to [problem3.cpp](https://github.com/jortizcs/Rutgers-PM1/blob/master/2020/lab4/p3/problem3.cpp) and the [makefile](https://github.com/jortizcs/Rutgers-PM1/blob/master/2020/lab4/p3/makefile).  Use the code in [p3](https://github.com/jortizcs/Rutgers-PM1/tree/master/2020/lab4/p3) to test your code.
+Given a matrix, clockwise-rotate elements in it.  Please add code to [problem3.cpp](https://github.com/jortizcs-rutgers/PM1-Spring2020-Rutgers/blob/master/lab4/p3/problem3.cpp) and the [makefile](https://github.com/jortizcs-rutgers/PM1-Spring2020-Rutgers/blob/master/lab4/p3/makefile).  Use the code in [p3](https://github.com/jortizcs-rutgers/PM1-Spring2020-Rutgers/tree/master/lab4/p3) to test your code.
 
 ```
 Input
