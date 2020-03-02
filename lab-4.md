@@ -7,7 +7,6 @@ For the lab, please submit a document with urls (one for each problem) to http:/
 Please fill in the code to reverse a linked list.
 
 ```C
-// Lab 4 Solution, Problem 1
 #include <stdio.h> 
 #include <stdlib.h> 
 #include <iostream>
