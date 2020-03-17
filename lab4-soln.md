@@ -133,6 +133,8 @@ int main()
 
 ## Problem 3
 
+[Solution](https://github.com/jortizcs-rutgers/PM1-Spring2020-Rutgers/tree/master/lab4/p3-soln)
+
 Given a matrix, clockwise-rotate elements in it.  Please add the code to problem3.h and problem3.cpp, provided.
 
 ```
