@@ -1,35 +1,37 @@
-// Demonstrating the order in which constructors and
-// destructors are called.
+// Demonstrating the Time class set and get functions
 #include <iostream>
 using namespace std;
-
-// include CreateAndDestroy class definition from create.h
-#include "create.h"
-void create( void ); // prototype
-// global object
-CreateAndDestroy first( 1, "(global before main)" );
-
+// include definition of class Time from time3.h
+#include "time3.h"
+void incrementMinutes( Time &, const int ); // prototype
 int main()
 {
-    cout << "\nMAIN FUNCTION: EXECUTION BEGINS" << endl;
-    CreateAndDestroy second( 2, "(local automatic in main)" );
-    static CreateAndDestroy third(3, "(local static in main)" );
-    
-    create(); // call function to create objects
-    cout << "\nMAIN FUNCTION: EXECUTION RESUMES" << endl;
-    CreateAndDestroy fourth( 4, "(local automatic in main)" );
-    cout << "\nMAIN FUNCTION: EXECUTION ENDS" << endl;
+    Time t; // create Time object
+    // set time using individual set functions
+    t.setHour( 17 ); // set hour to valid value
+    t.setMinute( 34 ); // set minute to valid value
+    t.setSecond( 25 ); // set second to valid value
+    // use get functions to obtain hour, minute and second
+    cout << "Result of setting all valid values:\n"
+        << " Hour: " << t.getHour()
+        << " Minute: " << t.getMinute()
+        << " Second: " << t.getSecond();
+    // set time using individual set functions
+    t.setHour( 234 ); // invalid hour set to 0
+    t.setMinute( 43 ); // set minute to valid value
+    t.setSecond( 6373 ); // invalid second set to 0
+    // display hour, minute and second after setting
+    // invalid hour and second values
+    cout << "\n\nResult of attempting to set invalid hour and"
+        << " second:\n Hour: " << t.getHour()
+        << " Minute: " << t.getMinute()
+        << " Second: " << t.getSecond() << "\n\n";
+    t.setTime( 11, 58, 0 ); // set time
+    incrementMinutes( t, 3 ); // increment t's minute by 3
     return 0;
 } // end main
 
-
-// function to create objects
-void create( void )
-{
-    cout << "\nCREATE FUNCTION: EXECUTION BEGINS" << endl;
-    CreateAndDestroy fifth( 5, "(local automatic in create)" );
-    static CreateAndDestroy sixth(6, "(local static in create)" );
-    CreateAndDestroy seventh(7, "(local automatic in create)" );
-    
-    cout << "\nCREATE FUNCTION: EXECUTION ENDS\"" << endl;
-} // end function create
+// add specified number of minutes to a Time object
+void incrementMinutes( Time &tt, const int count ){
+    return;
+} // end function incrementMinutes
