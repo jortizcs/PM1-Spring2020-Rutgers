@@ -1,132 +1,127 @@
-# Lab-4
+# Lab-6
 
-Due date: March 10, 2020 @11:59:59 PM
+Due date: 11:59:59pm on Sunday, April 26, 2020.
 
-For the lab, please submit a document with urls (one for each problem) to http://cpp.sh with your solution. On the site there is a button to create a URL. When your solution is complete (and tested so you verified it is working), click on the make URL link and add that link in your submission. Your code should include your name, netID and RUID.
+1.	All students must submit their lab through Sakai. 
+2.	Only one .cpp file named “lab6.cpp” is required for submission.
 
+Your code should include your name, netID and RUID.
 
 ## Problem 1
 
-Please fill in the code to reverse a linked list.
+Create a program that displays the address information and calculates the shipping for several packages. Firstly, the user is asked to enter the information of **one or more packages**, including the name, address, city, state, and ZIP code for both sender and recipient, and the weight and delivery method of the package. Then, the package information should be used to initialize the class constructor. You are required to use a vector of Package pointers to objects of classes **Package, TwoDayPackage, and OvernightPackage**. Finally, loop through the vector to process the packages polymorphically to calculate the cost of each package and the total cost of the package list (vector) and print out this information in addition to the information of the sender and the recipient. Specifically, invoke **get functions** (e.g., get_sender_name, etc.) to obtain the information of sender, recipient, weight and delivery method for each package. Print the names and addresses as they would appear as mailing labels. Display the weight of the package being shipped and its shipping method. Call each package’s **calculateCost** member function and print the result. Keep track of total shipping cost for all packages in the vector and display it.
 
-```C
-#include <stdio.h> 
-#include <stdlib.h> 
-#include <iostream>
+**Note:** Assign cost per ounce, two day delivery flat fee, and overnight delivery flat fee as $0.50, $2.00, and $5.00 in the main function, respectively. And use these variables to initialize the class constructors later.
 
-using namespace std;
-
-/* Link list node */
-struct Node { 
-	int data; 
-	// your code here
-}; 
-
-/* Function to reverse the linked list */
-static void reverse(struct Node** head_ref) 
-{ 
-	// your code here 
-} 
-
-/* Function to push a node */
-void push(struct Node** head_ref, int new_data) 
-{ 
-	// your code here 
-} 
-
-/* Function to print linked list */
-void printList(struct Node* head) 
-{ 
-	struct Node* temp = head; 
-	while (temp != NULL) { 
-		cout << temp->data << " "; 
-		temp = temp->next; 
-	} 
-} 
-
-/* Driver program to test above function*/
-int main() 
-{ 
-	/* Start with the empty list */
-	struct Node* head = NULL; 
-
-	push(&head, 10); 
-	push(&head, 20); 
-	push(&head, 15); 
-	push(&head, 85); 
-
-	cout << "Forward list\n"; 
-	printList(head); 
-	reverse(&head); 
-	cout << "\nReversed list \n"; 
-	printList(head); 
-} 
+Example:
 ```
+Input package information? (1/0) 1
 
-## Problem 2
+Sender name: John Smith
+Sender street address: 1 Davidson Road
+Sender city: Piscataway
+Sender state: NJ
+Sender ZIP code: 08854
+Recipient name: Tom Smith
+Recipient street address: 2 Campus Road
+Recipient city: Piscataway
+Recipient state: NJ
+Recipient ZIP code: 08854
+Package weight (ounces): 2
+Delivery method (R: regular, T: two day, O: overnight): O
+Overnight
 
-Write a function to reverse an array of integers starting from a given **start** index and a given **end** index.  Note, the end index is **inclusive**.  
+Input package information? (1/0) 1
 
-```C
-#include <iostream>
-using namespace std;
+Sender name: Mary Smith
+Sender street address: 3 Brett Road
+Sender city: Piscataway
+Sender state: NJ
+Sender ZIP code: 08854
+Recipient name: Jane Smith
+Recipient street address: 4 Allison Road
+Recipient city: Piscataway
+Recipient state: NJ
+Recipient ZIP code: 08854
+Package weight (ounces): 10
+Delivery method (R: regular, T: two day, O: overnight): R
+Regular
 
-void reverseArray(int[], int, int);
+Input package information? (1/0) 1
 
-void reverseArray(int arr[], int start, int end) 
-{ 
-   // your code here    
-}
+Sender name: Tom Smith
+Sender street address: 2 Campus Road
+Sender city: Piscataway
+Sender state: NJ
+Sender ZIP code: 08854
+Recipient name: Mary Smith
+Recipient street address: 3 Brett Road
+Recipient city: Piscataway
+Recipient state: NJ
+Recipient ZIP code: 08854
+Package weight (ounces): 5
+Delivery method (R: regular, T: two day, O: overnight): T
+Two day
 
-/* Utility that prints out an array on a line */
-void printArray(int arr[], int size)
-{
-  int i;
-  for (i=0; i < size; i++)
-    cout << arr[i] << " ";
-  cout << endl;
-}
+Input package information? (1/0) 0
 
-/* Driver function to test above functions */
-int main()
-{
-    int arr[] = {1, 2, 3, 4, 5, 6};
-    printArray(arr, 6);
-    reverseArray(arr, 0, 5);
-    cout <<"Reversed array is \n";
-    printArray(arr, 6);
-    return 0;
-}
-```
+**********************************************
+Package delivery information list
+
+Cost per ounce for a package: $0.50/ounce
+Additional cost for two day delivery: $2.00/ounce
+Additional cost for overnight delivery: $5.00/ounce
+
+Package 1:
+
+Sender:
+John Smith
+1 Davidson Road
+Piscataway, NJ 08854
+
+Recipient:
+Tom Smith
+2 Campus Road
+Piscataway, NJ 08854
+
+Weight of package: 2 ounce(s)
+Type of delivery: Overnight delivery
+Cost of package: $11.00
+
+Package 2:
+
+Sender:
+Mary Smith
+3 Brett Road
+Piscataway, NJ 08854
+
+Recipient:
+Jane Smith
+4 Allison Road
+Piscataway, NJ 08854
+
+Weight of package: 10 ounce(s)
+Type of delivery: Regular delivery
+Cost of package: $5.00
+
+Package 3:
+
+Sender:
+Tom Smith
+2 Campus Road
+Piscataway, NJ 08854
+
+Recipient:
+Mary Smith
+3 Brett Road
+Piscataway, NJ 08854
+
+Weight of package: 5 ounce(s)
+Type of delivery: Two day delivery
+Cost of package: $12.50
+
+Total numbers of packages: 3
+Total cost of all packages: $28.50
 
 
-## Problem 3
-
-Given a matrix, clockwise-rotate elements in it.  Please add code to [problem3.cpp](https://github.com/jortizcs-rutgers/PM1-Spring2020-Rutgers/blob/master/lab4/p3/problem3.cpp) and the [makefile](https://github.com/jortizcs-rutgers/PM1-Spring2020-Rutgers/blob/master/lab4/p3/makefile).  Use the code in [p3](https://github.com/jortizcs-rutgers/PM1-Spring2020-Rutgers/tree/master/lab4/p3) to test your code.
-
-Submit your code and a cpp.sh url, like in your projects and previous assignments.  For the cpp.sh url, put your solution into one large program.
-
-```
-Input
-1    2    3
-4    5    6
-7    8    9
-
-Output:
-4    1    2
-7    5    3
-8    9    6
-
-For 4*4 matrix
-Input:
-1    2    3    4    
-5    6    7    8
-9    10   11   12
-13   14   15   16
-
-Output:
-5    1    2    3
-9    10   6    4
-13   11   7    8
-14   15   16   12
 ```
