@@ -1,132 +1,21 @@
-# Lab-4
+# Lab-5
 
-Due date: March 10, 2020 @11:59:59 PM
+Due date: 11:59:59pm on Sunday, April 19, 2020.
 
-For the lab, please submit a document with urls (one for each problem) to http://cpp.sh with your solution. On the site there is a button to create a URL. When your solution is complete (and tested so you verified it is working), click on the make URL link and add that link in your submission. Your code should include your name, netID and RUID.
+1.	All students must submit their lab through Sakai. 
+2.	Only one .cpp file named “lab5.cpp” is required for submission.
 
+Your code should include your name, netID and RUID.
 
 ## Problem 1
 
-Please fill in the code to reverse a linked list.
+In this lab, you will build a system for package delivery services that provides different shipping options with specific price. 
 
-```C
-#include <stdio.h> 
-#include <stdlib.h> 
-#include <iostream>
+You are required to create an inheritance hierarchy to represent the various types of packages. Use **Package** as the base class of the hierarchy and include classes **TwoDayPackage** and **OvernightPackage** that derive from **Package**. The base class **Package** should include data members representing the **name, address, city, state and ZIP code** for both the sender and the recipient of the package, and data members that store the weight (in ounces) and **cost per ounce** to ship the package. **The constructor of the class Package should initialize these data members.**
 
-using namespace std;
+**The weight and the cost per ounce should contain positive values.** The class **Package** should provide a public member function **calculateCost** that returns a double indicating the cost associated with shipping the package. The **calculateCost** function in class **Package** should determine the cost by multiplying the weight by the cost per ounce.
 
-/* Link list node */
-struct Node { 
-	int data; 
-	// your code here
-}; 
+The derived class **TwoDayPackage** should not only inherit the functionality of the base class **Package**, but also include a data member that represents a **flat fee per ounce** that the shipping company charges for two-day delivery. The constructor of the class **TwoDayPackage** should receive a value to initialize this data member. Class **TwoDayPackage** should redefine member function **calculateCost** so that it computes the shipping cost by adding a flat fee per ounce to the standard cost per ounce calculated by the **calculateCost** function in the base class **Package**.
 
-/* Function to reverse the linked list */
-static void reverse(struct Node** head_ref) 
-{ 
-	// your code here 
-} 
+The requirements of the derived class **OvernightPackage** are similar as that of the class **TwoDayPackage**. Specifically, class **OvernightPackage** should inherit directly from class **Package** and contain an additional data member representing an additional flat fee per ounce charged for overnight delivery. Class **OvernightPackage** should redefine member function **calculateCost** so that it adds the additional fee per ounce to the standard cost per ounce when calculating the shipping cost.
 
-/* Function to push a node */
-void push(struct Node** head_ref, int new_data) 
-{ 
-	// your code here 
-} 
-
-/* Function to print linked list */
-void printList(struct Node* head) 
-{ 
-	struct Node* temp = head; 
-	while (temp != NULL) { 
-		cout << temp->data << " "; 
-		temp = temp->next; 
-	} 
-} 
-
-/* Driver program to test above function*/
-int main() 
-{ 
-	/* Start with the empty list */
-	struct Node* head = NULL; 
-
-	push(&head, 10); 
-	push(&head, 20); 
-	push(&head, 15); 
-	push(&head, 85); 
-
-	cout << "Forward list\n"; 
-	printList(head); 
-	reverse(&head); 
-	cout << "\nReversed list \n"; 
-	printList(head); 
-} 
-```
-
-## Problem 2
-
-Write a function to reverse an array of integers starting from a given **start** index and a given **end** index.  Note, the end index is **inclusive**.  
-
-```C
-#include <iostream>
-using namespace std;
-
-void reverseArray(int[], int, int);
-
-void reverseArray(int arr[], int start, int end) 
-{ 
-   // your code here    
-}
-
-/* Utility that prints out an array on a line */
-void printArray(int arr[], int size)
-{
-  int i;
-  for (i=0; i < size; i++)
-    cout << arr[i] << " ";
-  cout << endl;
-}
-
-/* Driver function to test above functions */
-int main()
-{
-    int arr[] = {1, 2, 3, 4, 5, 6};
-    printArray(arr, 6);
-    reverseArray(arr, 0, 5);
-    cout <<"Reversed array is \n";
-    printArray(arr, 6);
-    return 0;
-}
-```
-
-
-## Problem 3
-
-Given a matrix, clockwise-rotate elements in it.  Please add code to [problem3.cpp](https://github.com/jortizcs-rutgers/PM1-Spring2020-Rutgers/blob/master/lab4/p3/problem3.cpp) and the [makefile](https://github.com/jortizcs-rutgers/PM1-Spring2020-Rutgers/blob/master/lab4/p3/makefile).  Use the code in [p3](https://github.com/jortizcs-rutgers/PM1-Spring2020-Rutgers/tree/master/lab4/p3) to test your code.
-
-Submit your code and a cpp.sh url, like in your projects and previous assignments.  For the cpp.sh url, put your solution into one large program.
-
-```
-Input
-1    2    3
-4    5    6
-7    8    9
-
-Output:
-4    1    2
-7    5    3
-8    9    6
-
-For 4*4 matrix
-Input:
-1    2    3    4    
-5    6    7    8
-9    10   11   12
-13   14   15   16
-
-Output:
-5    1    2    3
-9    10   6    4
-13   11   7    8
-14   15   16   12
-```
