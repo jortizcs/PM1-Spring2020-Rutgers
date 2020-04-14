@@ -1,6 +1,6 @@
 # Lab-6
 
-Due date: 11:59:59pm on Sunday, April 26, 2020.
+Due date: 11:59:59pm on Tuesday, April 28, 2020.
 
 1.	All students must submit their lab through Sakai. 
 2.	Only one .cpp file named “lab6.cpp” is required for submission.
@@ -125,3 +125,5 @@ Total cost of all packages: $28.50
 
 
 ```
+
+Write a main.cpp file which includes a main function, only to test your library.  You may submit it with the code.  You may also copy-paste your code in cpp.sh and include a link with your submission (this will also make it easier for TAs to check your code during lab time).
