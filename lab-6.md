@@ -1,6 +1,6 @@
 # Lab-6
 
-Due date: 11:59:59pm on Tuesday, April 28, 2020.
+Due date: 11:59:59pm on Friday, May 1, 2020.
 
 1.	All students must submit their lab through Sakai. 
 2.	Only one .cpp file named “lab6.cpp” is required for submission.
