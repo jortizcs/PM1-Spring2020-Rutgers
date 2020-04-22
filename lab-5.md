@@ -1,6 +1,6 @@
 # Lab-5
 
-Due date: 11:59:59pm on Tuesday, April 21, 2020.
+Due date: 11:59:59pm on ~~Tuesday, April 21, 2020~~ Friday, April 24, 2020.  **Hard Deadline.  No more extensions**
 
 1.	All students must submit their lab through Sakai. 
 2.	Only one .cpp file named “lab5.cpp” is required for submission.
